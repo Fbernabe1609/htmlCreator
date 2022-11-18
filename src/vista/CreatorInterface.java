@@ -9,6 +9,7 @@ import javax.swing.text.html.HTMLDocument;
 import java.awt.*;
 import javax.swing.text.html.HTMLEditorKit;
 import javax.swing.text.html.StyleSheet;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.print.PrinterException;
 import java.io.File;
@@ -64,15 +65,15 @@ public class CreatorInterface {
         createTableMenuItem.addActionListener(e -> {
             TablesCreation.start();
         });
-        fontComboBox.addActionListener(e -> {
-            for (Font value : fonts) {
-                if (Objects.equals(fontComboBox.getSelectedItem(), value.getFontName())) {
-                    creatorTextPanel.setFont(value.deriveFont(12f));
-                } else if (fontComboBox.getSelectedIndex() == 0) {
-                    creatorTextPanel.getText();
-                }
-            }
-        });
+//        fontComboBox.addActionListener(e -> {
+//            for (Font value : fonts) {
+//                if (Objects.equals(fontComboBox.getSelectedItem(), value.getFontName())) {
+//                    creatorTextPanel.setFont(value.deriveFont(12f));
+//                } else if (fontComboBox.getSelectedIndex() == 0) {
+//                    creatorTextPanel.getText();
+//                }
+//            }
+//        });
 
         toolbarVisibilityMenuItem.addActionListener(e -> {
 
@@ -157,7 +158,24 @@ public class CreatorInterface {
         saveFileMenuItem.addActionListener(saveListener);
 
         blackLetterButton.addActionListener(e -> {
-            System.out.println(creatorTextPanel.getFont());
+            String selectedText = creatorTextPanel.getSelectedText();
+            String text2 = "<b>" + selectedText + "</b>";
+            creatorTextPanel.setText(text2);
+        });
+        cursiveButton.addActionListener(e -> {
+            String selectedText = creatorTextPanel.getSelectedText();
+            String text2 = "<em>" + selectedText + "</em>";
+            creatorTextPanel.setText(text2);
+        });
+        fontComboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int familyInt = fontComboBox.getSelectedIndex();
+                String family = fonts[familyInt].getFontName();
+                String selectedText = creatorTextPanel.getSelectedText();
+                String text2 = "<text style='font-family:"+family+">" + selectedText + "</text>";
+                creatorTextPanel.setText(text2);
+            }
         });
     }
 }
