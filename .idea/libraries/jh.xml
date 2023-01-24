@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jh">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/javaHelpClase/jh2.0/javahelp/lib/jh.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/javaHelpClase/jh2.0/javahelp/lib/jhall.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/javaHelpClase/jh2.0/javahelp/lib/jhbasic.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/javaHelpClase/jh2.0/javahelp/lib/jsearch.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
