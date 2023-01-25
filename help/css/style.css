@@ -1,0 +1,33 @@
+img {
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+h1{
+    font-style: oblique;
+    text-decoration-line: underline;
+    font-family: Arial;
+}
+body{
+    padding-left: 50px;
+}
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: infinite square 4s;
+    border: solid darkblue 6px;
+    text-align: center;
+    justify-items: center;
+    color: white;
+}
+
+@keyframes square {
+    0%   {background-color:red; left:0; top:0; border-color: darkblue; transform: rotate(0deg);}
+    25%  {background-color:orangered; left:200px; top:0; border-color: royalblue; transform: rotate(90deg);}
+    50%  {background-color:orange; left:200px; top:200px; border-color: cyan; transform: rotate(180deg);}
+    75%  {background-color:orangered; left:0; top:200px; border-color: royalblue; transform: rotate(90deg);}
+    100% {background-color:red; left:0; top:0; border-color: darkblue; transform: rotate(0deg);}
+}
