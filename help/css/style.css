@@ -2,12 +2,12 @@ img {
     border-radius: 35px;
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 20px auto;
 }
 h1{
     font-style: oblique;
     text-decoration-line: underline;
-    font-family: Arial;
+    font-family: Arial, serif;
 }
 body{
     padding-left: 50px;
